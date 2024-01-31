@@ -1,15 +1,9 @@
 #!/usr/bin/python3
 
 
-def uniq_add(my_list=[]):
+def common_elements(set_1, set_2):
     """
-    A function that adds all unique
-    integers in a list (only once for each integer)
+    A function that returns a set of
+    common elements in two sets
     """
-    new_list = []
-    sum = 0
-    for num in my_list:
-        if num not in new_list:
-            sum += num
-            new_list.append(num)
-    return sum
+    return(set_1 & set_2)
