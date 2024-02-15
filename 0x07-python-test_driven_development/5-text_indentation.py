@@ -1,29 +1,29 @@
 #!/usr/bin/python3
-""" defining function that pribt a text with 2 new lines
-    after a gien character """
+"""
+Module composed by a function that prints 2 new lines after ".?:" characters
+"""
 
 
 def text_indentation(text):
+    """ Function that prints 2 new lines after ".?:" characters
+    Args:
+        text: input string
+    Returns:
+        No return
+    Raises:
+        TypeError: If text is not a string
     """
-    print a text wit 2 lines after the 
-    each given character
 
-    text must be a string, if not raise TypeError
-    with a given message
-    """
-
-    if not isinstance(text, str):
+    if type(text) is not str:
         raise TypeError("text must be a string")
 
-    lines = ""
+    s = text[:]
 
-    for char in text:
-        lines += char
+    for d in ".?:":
+        list_text = s.split(d)
+        s = ""
+        for i in list_text:
+            i = i.strip(" ")
+            s = i + d if s is "" else s + "\n\n" + i + d
 
-    if char in ".?:":
-        print(lines.strip())
-        print("\n" * 2)
-
-    lines = ""
-    if lines:
-        print(lines.strip())
+    print(s[:-3], end="")
