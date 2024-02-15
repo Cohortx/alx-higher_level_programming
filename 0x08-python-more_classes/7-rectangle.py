@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" It is a class rectangle that defines a rectangle by
+""" A class rectangle that defines a rectangle by
     (base on 6-rectangle.py) """
 
 
